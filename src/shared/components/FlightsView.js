@@ -3,6 +3,8 @@ import Proptypes from 'prop-types';
 
 export class FlightsView extends Component{
 	render(){
+		const {onClick} = this.props;
+		const {text} = this.props;
 		return(
 			<div>
 				<ol>
@@ -10,7 +12,7 @@ export class FlightsView extends Component{
 					<li>Flight #2</li>
 					<li>Flight #3</li>
 				</ol>
-				<button>Go back</button>
+				<button onClick={onClick}>{text}</button>
 			</div>
 		)
 	}
